@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<style type="text/css">
+			.mui-table-view .mui-media-object {
+				line-height: 60px;
+				max-width: 90px;
+				width: 90px;
+				height: 60px;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				white-space: normal;
+				padding-left: 8px;
+				padding-right: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<ul class="mui-table-view" style="margin-top: 0px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces1.jpg">
+						<div class="mui-media-body">
+							中科院植物研究所杨春虹研究员来新疆生地 所开展学术交流
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces2.jpg">
+						<div class="mui-media-body">
+							新疆生地所召开三届五次职工代表暨 2016年度总结表彰大会
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces3.jpg">
+						<div class="mui-media-body">
+							新疆生地所与重庆绿色智能技术研究院携手 助力新疆和田地区饮水安全公益事业
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces4.jpg">
+						<div class="mui-media-body">
+							真情暖群众，笑迎和谐春— 新疆生地所领导班子春节开展走访慰问
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces5.jpg">
+						<div class="mui-media-body">
+							版纳站陈辉副站长与科普部刘光裕应邀给望天树景区工作人员进行科普教育
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces1.jpg">
+						<div class="mui-media-body">
+							浙江农林大学与长武站开展果园施肥新技术试验研究
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces2.jpg">
+						<div class="mui-media-body">
+							农田灌溉研究所党委书记陆建中到商丘站慰问
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:void(0);">
+						<img class="mui-media-object mui-pull-left" src="img/ces3.jpg">
+						<div class="mui-media-body">
+							沈阳站温室大棚修缮完成
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui('.mui-table-view-cell').on('tap', 'a', function() {
+			mui.openWindow({
+				url: 'detail.html',
+				id: 'ces_detail',
+				createNew: true,	//是否使用緩存，如果使用緩存的話，頁面還是停留在上次訪問的位置
+				styles: {
+					top: "45px",
+					bottom: "45px"
+				}
+			});
+		});
+	</script>
+
+</html>

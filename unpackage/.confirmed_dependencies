@@ -1,0 +1,73 @@
+{
+	"index.html": {
+		"resources": [
+			"index_cnt.html",
+			"js/mui.js",
+			"css/mui.css",
+			"main_menu/intro.html"
+		],
+		"refer": [
+			"index_cnt.html",
+			"bottom_menu.html",
+			"main_menu/res.html",
+			"main_menu/news.html",
+			"main_menu/proj.html",
+			"main_menu/intro.html",
+			"intro.html"
+		]
+	},
+	"index_cnt.html": {
+		"resources": [
+			"img/ces4.jpg",
+			"img/ces1.jpg",
+			"img/ces3.jpg",
+			"img/ces2.jpg",
+			"img/ces5.jpg",
+			"css/mui.css",
+			"detail.html"
+		],
+		"refer": [
+			"detail.html"
+		]
+	},
+	"detail.html": {
+		"resources": [
+			"css/mui.css",
+			"js/mui.js"
+		]
+	},
+	"bottom_menu.html": {
+		"resources": [
+			"css/mui.css",
+			"js/mui.js"
+		]
+	},
+	"main_menu/intro.html": {
+		"resources": [
+			"js/mui.js",
+			"css/mui.css"
+		]
+	},
+	"intro.html": {
+		"resources": [
+			"js/mui.js",
+			"css/mui.css"
+		]
+	},
+	"main_menu/res.html": {
+		"resources": [
+			"css/mui.css"
+		]
+	},
+	"main_menu/proj.html": {
+		"resources": [
+			"js/mui.js",
+			"css/mui.css"
+		]
+	},
+	"main_menu/news.html": {
+		"resources": [
+			"css/mui.css"
+		]
+	}
+}

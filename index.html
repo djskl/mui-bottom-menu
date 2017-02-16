@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="position: static;">
+			<h1 id="title" class="mui-title ig-title">CERN</h1>
+		</header>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" menu_view="intro">网络介绍</a>
+			<a class="mui-tab-item" menu_view="news">通知新闻</a>
+			<a class="mui-tab-item" menu_view="res">资源目录</a>
+			<a class="mui-tab-item" menu_view="proj">成果人员</a>
+		</nav>
+
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var main_menu_styles = {
+				top: "0px",
+				bottom: "45px",
+				background: "transparent"
+			};
+			var main_menus = [{
+				id: "intro",
+				url: "main_menu/intro.html",
+				styles: main_menu_styles
+			}, {
+				id: "news",
+				url: "main_menu/news.html",
+				styles: main_menu_styles
+			}, {
+				id: "proj",
+				url: "main_menu/proj.html",
+				styles: main_menu_styles
+			}, {
+				id: "res",
+				url: "main_menu/res.html",
+				styles: main_menu_styles
+			}];
+
+			mui.init({
+				subpages: [{	//需要滚动的部分最好用子页面来实现，否则容易卡顿
+					id: 'home_cnt',
+					url: 'index_cnt.html',
+					styles: {
+						top: "45px",
+						bottom: "45px"
+					}
+				}],
+				preloadPages: main_menus
+			});
+
+			var activeMenu = null;
+			mui('.mui-bar-tab').on('tap', 'a', function() {
+				_menu = this.getAttribute("menu_view");
+				if(_menu == activeMenu) {
+					plus.webview.hide(_menu);
+					activeMenu = null;
+					return;
+				}
+				if(activeMenu) {
+					plus.webview.hide(activeMenu, "auto");
+
+				}
+				//js不支持关键字参数，即使第2,3个参数没用，也得写上
+				plus.webview.show(_menu, "none", 300, function() {
+					plus.webview.getWebviewById(_menu).reload(true);
+				});
+				activeMenu = _menu;
+			});
+		</script>
+	</body>
+
+</html>
